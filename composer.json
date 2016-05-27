@@ -1,6 +1,8 @@
 {
     "name": "ozziest/di",
-    "description": "",
+    "description": "DI is a simple dependency injection manager.",
+    "keywords": ["php", "dependency injection", "manager"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Özgür Adem Işıklı",
@@ -15,7 +17,6 @@
     "autoload": {
         "psr-0": {
             "Ozziest": "src"
-        },
-        "classmap": ["tests/mocks"]
-    }    
+        }
+    }
 }
