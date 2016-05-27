@@ -46,7 +46,7 @@ class DI {
         return $class->newInstanceArgs($resolved);
     }    
     
-    public function getDependencies()
+    public static function getDependencies()
     {
         return self::$list;
     }
