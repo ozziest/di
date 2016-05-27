@@ -8,8 +8,6 @@
 
 This is a simple dependency injection manager. 
 
-> Do not use it on **production.**
-
 ### Installation 
 
 To install through composer, simply put the following in your `composer.json` file:
