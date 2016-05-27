@@ -28,8 +28,7 @@ class DI {
             foreach ($constructor->getParameters() as $index => $param)
             {
                 $paramType  = $param->getClass()->name;
-                $dependency = self::$list[$paramType];
-                if (isset($dependency) === false)
+                if (isset(self::$list[$paramType]) === false)
                 {
                     if (class_exists($paramType) === false)
                     {
@@ -37,7 +36,7 @@ class DI {
                     }
                     array_push($resolved, DI::resolve($paramType));
                 } else {
-                    array_push($resolved, DI::resolve($dependency));
+                    array_push($resolved, DI::resolve(self::$list[$paramType]));
                 }
             }
             
