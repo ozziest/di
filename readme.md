@@ -8,7 +8,7 @@
 
 This is a simple dependency injection manager. 
 
-> Do not use it on production.
+> Do not use it on **production.**
 
 ### Installation 
 
