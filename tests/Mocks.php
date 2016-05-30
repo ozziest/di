@@ -65,3 +65,23 @@ class MyOtherController {
     }
     
 }
+
+class OtherModel
+{
+    
+    public function __construct($name)
+    {
+        
+    }
+    
+}
+
+class MyFunction
+{
+    
+    public function __construct(MyOtherController $controller, OtherModel $model)
+    {
+        
+    }
+    
+}

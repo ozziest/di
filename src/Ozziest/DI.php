@@ -6,7 +6,7 @@ class DI {
     
     private static $list;
     
-    public static function set($name, $callback)
+    public static function bind($name, $callback)
     {
         if (isset(self::$list) === false)
         {
@@ -36,7 +36,15 @@ class DI {
                     }
                     array_push($resolved, DI::resolve($paramType));
                 } else {
-                    array_push($resolved, DI::resolve(self::$list[$paramType]));
+                    if (is_string(self::$list[$paramType]))
+                    {
+                        array_push($resolved, DI::resolve(self::$list[$paramType]));
+                    } 
+                    else 
+                    {
+                        $callable = self::$list[$paramType];
+                        array_push($resolved, $callable());
+                    }
                 }
             }
             
